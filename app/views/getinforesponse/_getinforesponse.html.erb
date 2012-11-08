@@ -1,0 +1,74 @@
+
+<% if(resp.nil?) %><b><span style="font-size: 16px;color: red;" ><%= resp %></span></b><% end %>
+	            <% if(!resp.nil?) %>
+				<br/><div style="height: 300px;width:100%;overflow:auto;" id="response_div">
+					<table border="1" id="response_tbl">
+						<tr>	
+							<th>ExtData         </th>
+							<th>Vendor          </th>
+							<th>MerchantID      </th>
+							<th>Phone1          </th>
+							<th>Phone2          </th>
+							<th>Auto_Close_Batch</th>
+							<th>CreditCard      </th>
+							<th>PaymentTypes    </th>
+							<th>CardType        </th>
+							<th>RespMSG         </th>
+							<th>Result          </th>
+						</tr>
+						    <% if(!resp.empty?)
+						     %>
+						        <tr>	
+									<td>
+										<!--<bean:write name="getInfoResponse" property="extData"/>-->
+										<%= resp["ExtData"] %>
+									</td>
+									<td>
+										<!--<bean:write name="getInfoResponse" property="vendor"/>-->
+										<%= resp["Vendor"] %>
+									</td>
+									<td>
+										<!--<bean:write name="getInfoResponse" property="merchantID"/>-->
+										<%= resp["MerchantID"] %>
+									</td>
+									<td>
+										<!--<bean:write name="getInfoResponse" property="phone1"/>-->
+										<%= resp["Phone1"] %>
+									</td>
+									<td>
+										<!--<bean:write name="getInfoResponse" property="phone2"/>-->
+										<%= resp["Phone2"] %>
+									</td>
+									<td>
+										<!--<bean:write name="getInfoResponse" property="auto_Close_Batch"/>-->
+										<%= resp["Auto_Close_Batch"] %>
+									</td>
+									<td>
+										<!--<bean:write name="getInfoResponse" property="creditCard"/>-->
+										<%= resp["CreditCard"] %>
+									</td>
+									<td>
+										<!--<bean:write name="getInfoResponse" property="paymentTypes"/>-->
+										<%= resp["PaymentTypes"] %>
+									</td>
+									<td>
+										<!--<bean:write name="getInfoResponse" property="cardType"/>-->
+										<%= resp["CardType"] %>
+									</td>
+									<td>
+										<!--<bean:write name="getInfoResponse" property="respMSG"/>-->
+										<%= resp["RespMSG"] %>
+									</td>
+									<td>
+										<!--<bean:write name="getInfoResponse" property="result"/>-->
+										<%= resp["Result"] %>
+									</td>
+								</tr>					
+							<%
+							  else
+      					      %>
+							<tr><td colspan="15">No record found</td></tr>
+						   <% end %>
+						</table>
+				</div>
+				<% end %>

@@ -1,0 +1,2 @@
+module ManagecontractHelper
+end

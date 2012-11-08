@@ -1,0 +1,123 @@
+<% if(resp.nil?) %><b><span style="font-size: 16px;color: red;" ><%= resp %></span></b><% end %>
+		
+		        <% if(!resp.nil?) %>
+				<br/><div style="height: 300px;width:100%;overflow:auto;" id="response_div">
+					<table border="1" id="response_tbl">
+						<tr>	
+							<th>Payment_Type_ID  </th>
+							<th>Sale             </th>
+							<th>Authorization    </th>
+							<th>PostAuth         </th>
+							<th>ReturnAmt        </th>
+							<th>Inquire          </th>
+							<th>Capture          </th>
+							<th>Reload           </th>
+							<th>Activate         </th>
+							<th>Sale_Cnt         </th>
+							<th>Authorization_Cnt</th>
+							<th>PostAuth_Cnt     </th>
+							<th>Return_Cnt       </th>
+							<th>Capture_Cnt      </th>
+							<th>Inquire_Cnt      </th>
+							<th>Reload_Cnt       </th>
+							<th>Activate_Cnt     </th>
+						</tr>
+						 <% if(!resp.empty?)
+						    resp.each do |resp, value|
+                             %> 
+								<tr>	
+								    <td>
+										<%= resp["Payment_Type_ID"] %>
+									</td>
+									<td>
+										<%= resp["Sale"] %>
+									</td>
+								    <td>
+										
+										<%= resp["Authorization"] %>
+									</td>
+									
+									
+									<td>
+										
+										<%= resp["PostAuth"] %>
+									</td>
+									
+									
+									<td>
+										
+										<%= resp["Return"] %>
+									</td>
+									
+									
+									<td>
+										
+										<%= resp["Inquire"] %>
+									</td>
+									
+									
+									<td>
+										<%= resp["Capture"] %>
+									</td>
+									
+									
+									<td>
+									    <%= resp["Reload"] %>
+									</td>
+									
+									
+									<td>
+									  <%= resp["Activate"] %>
+									</td>
+									
+									
+									<td>
+										<%= resp["Sale_Cnt"] %>
+									</td>
+									
+									
+									<td>
+									   <%= resp["Authorization_Cnt"] %>
+									</td>
+									
+									
+									<td>
+									 <%= resp["PostAuth_Cnt"] %>
+									</td>
+									
+									
+									<td>
+									  <%= resp["Return_Cnt"] %>
+									</td>
+									
+									
+									<td>
+										<%= resp["Capture_Cnt"] %>
+									</td>
+									
+									
+									<td>
+										<%= resp["Inquire_Cnt"] %>
+									</td>
+									
+									
+									<td>
+										
+										<%= resp["Reload_Cnt"] %>
+									</td>
+									
+									
+									<td>
+										<%= resp["Activate_Cnt"] %>
+									</td>
+									
+									</tr>					
+							<%
+							end  
+                            else
+      					      %>
+							<tr><td colspan="15">No record found</td></tr>
+						   <% end %>
+					</table>
+				</div>
+			  <% end %>

@@ -1,0 +1,2 @@
+module ManagecreditinfoHelper
+end

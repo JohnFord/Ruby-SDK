@@ -1,0 +1,88 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<%= stylesheet_link_tag "main" %>
+<script type="text/javascript" src="script/common.js"></script>
+</head>
+<body>
+<div id="container">
+	<%=render :partial => "header/header" , :locals => { :selectedHeader => "merchant" ,:selectedSubMenu => "checkRecurringBilling"}  %>
+	<div id="content">
+		<h1>Process Check - Recurring Billing</h1>
+		<%= form_for :post , url: { action: :processcheckrecurringbillingrequest } do |f| %>
+			<table cellpadding="5" cellspacing="5">
+				<tr>	
+					<td colspan="2">
+						&nbsp;
+					</td>						
+				</tr>
+				
+				<%=render :partial => "urlcombo/urlcombo" %>			
+				
+				<tr>	
+					<td>
+						Vendor
+					</td>
+					<td>
+						<input type="text" id="vendor" name="vendor"/>
+					</td>			
+				</tr>
+				
+				<tr>	
+					<td>
+						Check InfoKey
+					</td>
+					<td>
+						<input type="text" id="checkInfoKey" name="checkInfoKey"/>
+					</td>			
+				</tr>
+				
+				<tr>	
+					<td>
+						Amount
+					</td>
+					<td>
+						<input type="text" id="amount" name="amount"/>
+					</td>			
+				</tr>
+				
+				<tr>	
+					<td>
+						Inv Num
+					</td>
+					<td>
+						<input type="text" id="invNum" name="invNum" />
+					</td>			
+				</tr>
+				
+				<tr>	
+					<td>
+						Ext Data
+					</td>
+					<td>
+						<input type="text" id="extData" name="extData" />
+					</td>			
+				</tr>
+				
+				<tr>	
+					<td colspan="2">&nbsp;</td>
+				</tr>
+				<tr>	
+					<td colspan="2">
+						<input type="submit" value="OK" class="submit"/>					
+					</td>						
+				</tr>
+			</table>
+		<% end %>
+	  <%=render :partial => "webserviceresponse/webserviceresponse", :locals => { :resp => @resp } %>	
+	</div>
+	<!-- content div ends here -->
+	<div class="clearfix"></div>
+</div>
+<!-- container div ends here -->
+<%=render :partial => "footer/footer" %>
+</body>
+</html>

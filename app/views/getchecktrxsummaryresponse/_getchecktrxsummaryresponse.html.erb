@@ -1,0 +1,128 @@
+
+	<% if(!resp.nil? && resp.kind_of?(String)) %><b><span style="font-size: 16px;color: red;" ><%= resp %></span></b><% end %>
+		        <% if(!resp.nil?)%>
+				<div style="height: 300px;width:100%;overflow:auto;" id="response_div">
+					<table border="1" id="response_tbl">
+						<tr>	
+							<th>TRX_HD_Key      </th>
+							<th>Invoice_ID      </th>
+							<th>Date_DT         </th>
+							<th>Merchant_Key    </th>
+							<th>TUser_Name_VC   </th>
+							<th>Tip_Amt_MN      </th>
+							<th>Approval_Code_CH</th>
+							<th>Auth_Amt_MN     </th>
+							<th>Account_Type_CH </th>
+							<th>Last_Update_DT  </th>
+							<th>Orig_TRX_HD_Key </th>
+							<th>Result_CH       </th>
+							<th>Result_Txt_VC   </th>
+							<th>Settle_Date_DT  </th>
+							<th>Settle_Flag_CH  </th>
+							<th>Trans_Type_ID   </th>
+							<th>Void_Flag_CH    </th>
+							<th>CustomerID      </th>
+							<th>AVS_Resp_CH     </th>
+							<th>CV_Resp_CH      </th>
+							<th>Host_Ref_Num_CH </th>
+							<th>Zip_CH          </th>
+							<th>CheckNum_CH     </th>
+							<th>AccountNum_VC   </th>
+							<th>Total_Amt_MN    </th>
+							<th>NameOnCheck_VC  </th>
+							<th>TransitNum_VC   </th>						
+						</tr>
+						<%  if(!resp.empty?)
+						    resp.each do |key, value|
+						      %>
+								<tr>	
+									<td>
+										<%= key["TRX_HD_Key"] %>
+									</td>
+									<td>
+										<%= key["Invoice_ID"] %>
+									</td>
+									<td>
+									    <%= key["Date_DT"] %>
+									</td>
+									<td>
+										<%= key["Merchant_Key"] %>
+									</td>
+									<td>
+									   <%= key["TUser_Name_VC"] %>
+									</td>
+									<td>
+									   <%= key["Tip_Amt_MN"] %>
+									</td>
+									<td>
+										<%= key["Approval_Code_CH"] %>
+									</td>
+									<td>
+										<%= key["Auth_Amt_MN"] %>
+									</td>
+									<td>
+										<%= key["Account_Type_CH"] %>
+									</td>
+									<td>
+										<%= key["Last_Update_DT"] %>
+									</td>
+									<td>
+										<%= key["Orig_TRX_HD_Key"] %>
+									</td>
+									<td>
+										<%= key["Result_CH"] %>
+									</td>
+									<td>
+										<%= key["Result_Txt_VC"] %>
+									</td>
+									<td>
+										<%= key["Settle_Date_DT"] %>
+									</td>
+									<td>
+										<%= key["Settle_Flag_CH"] %>
+									</td>
+									<td>
+										<%= key["Trans_Type_ID"] %>
+									</td>
+									<td>
+										<%= key["Void_Flag_CH"] %>
+									</td>
+									<td>
+										<%= key["CustomerID"] %>
+									</td>
+									<td>
+									   <%= key["AVS_Resp_CH"] %>
+									</td>
+									<td>
+										<%= key["CV_Resp_CH"] %>
+									</td>
+									<td>
+									   <%= key["Host_Ref_Num_CH"] %>
+									</td>
+									<td>
+										<%= key["Zip_CH"] %>
+									</td>
+									<td>
+										<%= key["CheckNum_CH"] %>
+									</td>
+									<td>
+									   <%= key["AccountNum_VC"] %>
+									</td>
+									<td>
+								       <%= key["Total_Amt_MN"] %>
+									</td>
+									<td>
+									  <%= key["NameOnCheck_VC"] %>
+									</td>
+									<td>
+									  <%= key["TransitNum_VC"] %>
+									</td>
+								</tr>					
+							 <% end
+							 else %>
+							<tr><td colspan="15">No record found</td></tr>
+						   <% end %>
+					</table>
+				</div>
+				<% end %>
+			
