@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This class processes Payment EBT Card Transactions.
 class TransactProcessEBTCard
 #this method returns string response

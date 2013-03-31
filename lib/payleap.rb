@@ -1,4 +1,5 @@
 module Payleap
+  require 'httparty'
   %w( payleap/api
       payleap/constants
       payleap/version

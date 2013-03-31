@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 class ProcessCreditCard
    def processcreditcardrequest(url,username,password,transtype,cardnum,expdate,magdata,nameoncard,total,ticketnumber,refnum,zip,street,cvnumber,extdata)
     strresponse = ""

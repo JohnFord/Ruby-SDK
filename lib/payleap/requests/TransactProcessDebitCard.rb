@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This class Processes Payment Debit Card Transactions.
 class TransactProcessDebitCard
 #This method returns string response

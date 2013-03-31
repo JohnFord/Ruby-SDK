@@ -1,6 +1,3 @@
-require "rubygems"
-require "httparty"
-require 'Constants'
 #This class generates Customer Key
 class TransactSampleToken
 #this method returns string response

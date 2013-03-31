@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This class will help to call the service operation processes credit card transactions within the recurring billing module.
 class MerchantProcessCreditCardRecurringBilling
 #This method returns string response

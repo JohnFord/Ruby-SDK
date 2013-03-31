@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #ReportGetCardTrx class will help retrieve card transaction details for a merchant.<br>
 #ReportGetCardTrx class returns string response<br>
 class ReportGetCardTrx

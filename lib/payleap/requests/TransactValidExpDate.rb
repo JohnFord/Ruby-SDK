@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This method checks the expiration date of card.
 class TransactValidExpDate
 #This method returns string response

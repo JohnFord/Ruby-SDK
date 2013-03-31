@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #The ValidCard service operation performs a validation check on a credit card.
 class TransactValidCard
 #This method returns string response

@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This class will help you to consume the service which allows you to add a customer, contract, and credit card payment #method all in one call
 class MerchantAddRecurringCreditCard
 #This method returns string response 

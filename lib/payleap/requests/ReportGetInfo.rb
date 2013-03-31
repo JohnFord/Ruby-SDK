@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This class will help to retrieve information related to your merchant account<br>
 class ReportGetInfo
 #This method returns string response<br>

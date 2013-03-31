@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This service operation processes check transactions within the recurring billing module.
 class MerchantProcessCheckRecurringBilling
 #This method returns string response

@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This class handles send a check transaction operation
 class TransactProcessCheck
 #This method returns string response

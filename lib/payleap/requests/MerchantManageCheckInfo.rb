@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This class will allows you to consume service operation that allows you to add, update, and delete check payment information
 class MerchantManageCheckInfo
 #This method returns string response

@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This class processes Payment Gift Card Transaction.
 class TransactProcessGiftCard
 #this method returns string response

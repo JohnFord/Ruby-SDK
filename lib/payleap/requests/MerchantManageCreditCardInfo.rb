@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This service operation allows you to add allows you to add, update, and delete credit card payment information.
 class MerchantManageCreditCardInfo
 #This method resturns string response

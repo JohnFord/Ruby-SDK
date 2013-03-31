@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This method  performs a mod 10 checksum.
 class TransactValidMod10
 #This method resturns string response

@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #ReportGetCheckTrx class will help to retrieve check transaction details for a merchant	<br>
 class ReportGetCheckTrx
 #GetCheckTrx will return string response<br>

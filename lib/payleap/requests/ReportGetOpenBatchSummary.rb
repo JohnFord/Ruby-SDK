@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This class will help to retrieve the payment type transaction summary of the current open batch for a merchant<br>
 class ReportGetOpenBatchSummary
 #This method will return string response<br>

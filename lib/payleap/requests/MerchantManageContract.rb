@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This service operation allows you to add, update, and delete contract information.
 class MerchantManageContract
 #This method returns string response

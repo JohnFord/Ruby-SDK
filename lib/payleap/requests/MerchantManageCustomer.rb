@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This service operation allows you to add, update, and delete customer information.
 class MerchantManageCustomer
 #This method returns string response 

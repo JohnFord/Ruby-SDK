@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #This service operation allows you to add a customer, contract, and check payment method all in one call.
 class MerchantAddRecurringCheck
 #This method returns string response

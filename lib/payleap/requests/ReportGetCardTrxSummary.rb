@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #ReportGetCardTrxSummary class will help to retrieve a summary of card payments for a merchant<br>
 #ReportGetCardTrxSummary will return string response<br>
 class ReportGetCardTrxSummary

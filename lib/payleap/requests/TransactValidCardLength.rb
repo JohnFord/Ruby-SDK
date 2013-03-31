@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'httparty'
 #It checks the card length based on the card type
 class TransactValidCardLength
 #This method resturns string response
