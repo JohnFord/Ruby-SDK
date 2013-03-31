@@ -1,9 +1,10 @@
 module Payleap
-  class Request
-    def self.get(options)
-      params = encode_params(options[:params])
+  module Request
+    def payleap_get(options)
+      credentials = { :Username => username, :Password => transaction_key }
+      params = encode_params(options[:params].merge(credentials))
       begin
-        url = URI.encode("#{Payleap::UAT_SERVER_URL}?#{params}")
+        url = URI.encode("#{Payleap::UAT_SERVER_URL}/#{options[:call]}?#{params}")
         HTTParty.get(url).parsed_response
       rescue Exception => e
         # TODO: Throw Payleap Exception
@@ -11,7 +12,7 @@ module Payleap
       end
     end
 
-    def self.encode_params(params={})
+    def encode_params(params={})
       params.collect{|k,v| "#{k}=#{v}"}.join('&')
     end
   end
