@@ -1,2 +1,0 @@
-module Transactvalidmod10Helper
-end
