@@ -1,5 +1,8 @@
-require "payleap/version"
-
 module Payleap
-  # Your code goes here...
+  %w( payleap/api
+      payleap/constants
+      payleap/version
+  ).each do |lib|
+    require File.join(File.dirname(__FILE__), lib)
+  end
 end
