@@ -25,9 +25,9 @@ def SampleToken(url,userName,password,transType,cardNum,vendorNum,expDate,magDat
 	merchanturl = ""
 	begin
 	if(url.index("uat") > 0 )
-	   merchanturl = AppConstants::UAT_SERVER_URL + 'MerchantServices.svc/ProcessCreditCard'
+	   merchanturl = Payleap::UAT_SERVER_URL + 'MerchantServices.svc/ProcessCreditCard'
 	else
-       merchanturl = AppConstants::PRODUCTION_SERVER_URL + 'MerchantServices.svc/ProcessCreditCard'
+       merchanturl = Payleap::PRODUCTION_SERVER_URL + 'MerchantServices.svc/ProcessCreditCard'
 	 end  
 	response = HTTParty.get(URI.encode(url+'?'+data))
 	data = response.parsed_response
