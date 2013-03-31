@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Payleap::VERSION
   gem.authors       = ["John Ford"]
   gem.email         = ["jwford@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Ruby interface to the PayLeap payments API}
+  gem.summary       = %q{Ruby interface to the PayLeap payments API}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
