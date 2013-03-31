@@ -1,12 +1,9 @@
+require 'httparty'
+%w(api client configuration constants version).each do |lib|
+  require File.join(File.dirname(__FILE__), 'payleap', lib)
+end
 module Payleap
-  require 'httparty'
-  %w( payleap/api
-      payleap/client
-      payleap/constants
-      payleap/version
-  ).each do |lib|
-    require File.join(File.dirname(__FILE__), lib)
-  end
+  extend Configuration
 
   class << self
     def new(options={})
