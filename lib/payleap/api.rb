@@ -2,3 +2,9 @@
   ).each do |lib|
   require File.join(File.dirname(__FILE__), 'requests', lib)
 end
+
+module Payleap
+  module Api
+    include TransactValidMod10
+  end
+end

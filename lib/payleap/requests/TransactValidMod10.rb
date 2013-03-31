@@ -1,25 +1,9 @@
-#This method  performs a mod 10 checksum.
-class TransactValidMod10
-#This method resturns string response
-#url - Base url of service 
-#CardNum - The credit card number to verify.
-   def ValidMod10(url,cardnumber)
-    data = 'CardNumber='+cardnumber
-    strresponse = ""
-	begin
-    response = HTTParty.get(URI.encode(url+'?'+data))
-    data = response.parsed_response
-	if(data["boolean"]["__content__"] == 'true')
-	  strresponse = strresponse + "Valid card number."
-	end
-	if(data["boolean"]["__content__"] == 'false')
-	  strresponse = strresponse + "Invalid card number."
-	end 
-	return strresponse
-   rescue Exception => e
-    return e.message
+module Payleap
+  module TransactValidMod10
+    def ValidMod10(cardnumber)
+      data = {:CardNumber => cardnumber}
+      response = Payleap::Request.get(:params => data)
+      response["boolean"]["__content__"] == 'true'
     end
-   end
+  end
 end
-
-

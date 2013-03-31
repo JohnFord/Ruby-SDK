@@ -1,6 +1,7 @@
 require File.join(File.dirname(__FILE__), 'configuration')
 module Payleap
   class Client
+    include Api
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
     def initialize(options={})
       options = Acculynk.options.merge(options)
