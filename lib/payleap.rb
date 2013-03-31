@@ -1,5 +1,5 @@
 require 'httparty'
-%w(api client configuration constants version).each do |lib|
+%w(api client configuration constants request version).each do |lib|
   require File.join(File.dirname(__FILE__), 'payleap', lib)
 end
 module Payleap
