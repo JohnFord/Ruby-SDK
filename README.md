@@ -1,6 +1,6 @@
 # Payleap
 
-TODO: Write a gem description
+Ruby interface to the PayLeap payments API
 
 ## Installation
 
@@ -18,7 +18,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First create a PayLeap client object
+    payleap = Payleap::Client.new(:username => 'API Username', :transaction_key => 'Your Key')
 
 ## Contributing
 
